@@ -1,0 +1,157 @@
+:root {
+  --oscs-blue: #203763;
+  --oscs-darker-blue: #04112d;
+  --oscs-dark-blue: #0D2047;
+  --oscs-med-blue: #3c537f;
+  --oscs-light-blue: #63769d;
+
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+    background-color: var(--oscs-blue);
+    background-image: url("Images/background.jpeg");
+    background-position: center;
+
+    text-align: center;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--oscs-dark-blue);
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+section {
+  margin: 24px 0;
+}
+
+header {
+  position: sticky;
+  top: 20px;
+  background-color: var(--oscs-dark-blue);
+  width: 95%;
+  margin: 20px auto;
+  font-size: 75%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+  padding: 20px 4px;
+  flex: 1;
+  transition: background-color 0.2s ease;
+
+}
+
+header a:hover {
+  background-color: var(--oscs-darker-blue);
+}
+
+main {
+  width: 90%;
+  max-width: 750px;
+  margin: auto;
+}
+
+footer {
+  display: block;
+  width: 100%;
+  margin: 25px 0 0;
+  background-color: var(--oscs-dark-blue);
+  color: white;
+}
+
+footer  p {
+  padding: 24px;
+  margin: 0px;
+}
+
+h1 {
+  color:white;
+  font-size: 300%;
+  margin: 48px 0 40px;
+}
+
+h2 {
+  font-size: 200%;
+  margin: 5px;
+}
+
+:is(main, footer) a {
+  color: var(--oscs-light-blue);
+}
+
+:is(main, footer) a:hover {
+  text-decoration: none;
+}
+
+p {
+  font-size: 120%;
+  padding: 15px;
+}
+
+.white-box {
+  background-color: white;
+  width: 100%;
+  margin: 40px 0;
+  box-shadow: 0 0 15px var(--oscs-darker-blue);
+}
+
+.meetups {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+@media (max-width: 1000px) {
+  .hide-mobile {
+    display: none;
+  }
+  .meetups {
+    grid-template-columns: 100%;
+  }
+}
+.meetups div {
+  background-color: white;
+  place-items: center;
+  padding: 10px;
+  box-shadow: 0 0 15px var(--oscs-darker-blue);
+  padding: 10px;
+}
+
+.commitee {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0, 1fr));
+  gap: 40px;
+}
+@media (max-width: 1000px) {
+  .commitee {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.commitee div{
+  background-color: white;
+  box-sizing: border-box;
+  padding: 10px;
+  aspect-ratio: 1/1;
+  width: auto;
+  min-height: 0;
+  box-shadow: 0 0 15px var(--oscs-darker-blue);
+}
+@media (max-width: 700px) {
+  .commitee {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .commitee div {
+    aspect-ratio: auto;
+  }
+}
+.committee-roll {
+  font-size: 150%;
+  margin: 10px;
+}
+.commitee p {
+  padding: 0px;
+}
